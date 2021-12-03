@@ -58,12 +58,12 @@ advent_calendar_authors = [
 # Create a document in A5 landscape.
 pdf = FPDF("L", "mm", format="A5")
 pdf.set_author("Markus Siegel");
-pdf.set_title("Adventskalendar");
+pdf.set_title("Adventskalender");
 
 pdf.add_page()
 pdf.set_font("Courier", "B", 30)
 # Print the document headline.
-pdf.cell(0, 50, "Adventskalendar", 0, 0, "C")
+pdf.cell(0, 50, "Adventskalender", 0, 0, "C")
 
 # Add a page for each day until Christmas.
 for i in range(24):
@@ -99,5 +99,5 @@ for i in range(24):
     pdf.ln()
 
 # Generate the pdf file.
-filename = "Adventskalendar.pdf"
+filename = "Adventskalender.pdf"
 pdf.output(filename)
