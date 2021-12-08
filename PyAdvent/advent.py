@@ -1,5 +1,4 @@
 from fpdf import FPDF
-import os
 
 advent_calendar = [
     "Bei einer Kerze ist nicht das Wachs wichtig, sondern das Licht.", 
@@ -57,8 +56,8 @@ advent_calendar_authors = [
 
 # Create a document in A5 landscape.
 pdf = FPDF("L", "mm", format="A5")
-pdf.set_author("Markus Siegel");
-pdf.set_title("Adventskalender");
+pdf.set_author("Markus Siegel")
+pdf.set_title("Adventskalender")
 
 pdf.add_page()
 pdf.set_font("Courier", "B", 30)
@@ -96,7 +95,6 @@ for i in range(24):
 
     # Print the author of the quote.
     pdf.cell(0, 5, "- " + advent_calendar_authors[i] + " -", 0, 0, "R")
-    pdf.ln()
 
 # Generate the pdf file.
 filename = "Adventskalender.pdf"
